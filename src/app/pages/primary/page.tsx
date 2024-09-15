@@ -1,5 +1,3 @@
-// app/primary/page.tsx
-
 "use client";
 import { useState } from "react";
 import Link from "next/link";
@@ -42,7 +40,7 @@ export default function Primary() {
         <div className="flex items-center justify-between w-full">
           {/* Back arrow on the left */}
           <Link href="/">
-            <span className="text-black text-3xl hover:text-gray-700 cursor-pointer">
+            <span className="text-black text-3xl hover:text-gray-700 cursor-pointer transition duration-300 transform hover:scale-105">
               <FiArrowLeft size={36} />
             </span>
           </Link>
@@ -52,12 +50,12 @@ export default function Primary() {
             src={logo}
             width={100}
             height={100}
-            className="w-24 h-24 sm:w-32 sm:h-32"
+            className="w-24 h-24 sm:w-32 sm:h-32 transition duration-300 transform hover:scale-105"
           />
           {/* Spacer on the right */}
           <div className="w-9"></div> {/* To balance the back arrow */}
         </div>
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mt-4">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mt-4 animate-slideIn">
           سنوات الابتدائية
         </h1>
       </header>
@@ -65,7 +63,7 @@ export default function Primary() {
       {/* Main Content */}
       {selectedYear && selectedYearData ? (
         // If a year is selected, display the content
-        <section className="text-center rtl">
+        <section className="text-center rtl animate-slideIn">
           <h2 className="text-3xl font-semibold mb-4">
             السنة {yearLabels[selectedYear - 1]}
           </h2>
@@ -83,7 +81,7 @@ export default function Primary() {
                 return (
                   <li
                     key={itemKey}
-                    className={`flex items-center justify-end mb-2 ${
+                    className={`flex items-center justify-end mb-2 transition duration-300 ${
                       checkedItems[itemKey] ? "line-through text-gray-400" : ""
                     }`}
                   >
@@ -91,7 +89,7 @@ export default function Primary() {
                     {notebook.pages}
                     <input
                       type="checkbox"
-                      className="ml-2 scale-125" // Checkbox on the left in RTL
+                      className="ml-2 scale-125 cursor-pointer"
                       checked={checkedItems[itemKey] || false}
                       onChange={() => handleCheckboxChange(itemKey)}
                     />
@@ -108,14 +106,14 @@ export default function Primary() {
                 return (
                   <li
                     key={itemKey}
-                    className={`flex items-center justify-end mb-2 ${
+                    className={`flex items-center justify-end mb-2 transition duration-300 ${
                       checkedItems[itemKey] ? "line-through text-gray-400" : ""
                     }`}
                   >
                     {item}
                     <input
                       type="checkbox"
-                      className="ml-2 scale-125" // Checkbox on the left in RTL
+                      className="ml-2 scale-125 cursor-pointer"
                       checked={checkedItems[itemKey] || false}
                       onChange={() => handleCheckboxChange(itemKey)}
                     />
@@ -132,14 +130,14 @@ export default function Primary() {
                 return (
                   <li
                     key={itemKey}
-                    className={`flex items-center justify-end mb-2 ${
+                    className={`flex items-center justify-end mb-2 transition duration-300 ${
                       checkedItems[itemKey] ? "line-through text-gray-400" : ""
                     }`}
                   >
                     {item}
                     <input
                       type="checkbox"
-                      className="ml-2 scale-125" // Checkbox on the left in RTL
+                      className="ml-2 scale-125 cursor-pointer"
                       checked={checkedItems[itemKey] || false}
                       onChange={() => handleCheckboxChange(itemKey)}
                     />
@@ -151,19 +149,18 @@ export default function Primary() {
 
           <button
             onClick={handleBackToSelection}
-            className="bg-blue-600 text-white py-2 px-6 rounded-lg text-xl hover:bg-blue-700 transition duration-200 mt-6"
+            className="bg-blue-600 text-white py-2 px-6 rounded-lg text-xl hover:bg-blue-700 transition duration-300 transform hover:scale-105 mt-6"
           >
             العودة لاختيار السنة
           </button>
         </section>
       ) : (
         // If no year is selected, display the year selection buttons
-        <section className="text-center mb-8 rtl">
+        <section className="text-center mb-8 rtl animate-slideIn">
           <p className="text-2xl font-semibold">اختر سنة من السنوات</p>
-          {/* Additional Text */}
           <p className="text-lg mt-2">
-            يمكنك اختيار السنة الدراسية للاطلاع على التفاصيل والمواد المطلوبة
-            لكل سنة.
+            يمكنك اختيار السنة الدراسية للاطلاع على التفاصيل والمواد المطلوبة لكل
+            سنة.
           </p>
 
           {/* Buttons */}
@@ -172,7 +169,7 @@ export default function Primary() {
               <button
                 key={index}
                 onClick={() => handleYearClick(index + 1)}
-                className="bg-white text-black py-4 px-8 rounded-xl text-2xl shadow-md hover:bg-gray-100 transition duration-200 w-64"
+                className="bg-white text-black py-4 px-8 rounded-xl text-2xl shadow-md hover:bg-gray-100 transition duration-300 transform hover:scale-105 w-64"
               >
                 السنة {label}
               </button>
