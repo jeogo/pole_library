@@ -34,7 +34,7 @@ export default function Middle() {
     : undefined;
 
   return (
-    <div className="bg-amber-300 min-h-screen p-4 animate-fadeIn">
+    <div className="bg-amber-300 min-h-screen p-4 animate-fadeIn text-black">
       {/* Header */}
       <header className="flex flex-col items-center mb-8 rtl">
         <div className="flex items-center justify-between w-full">
@@ -149,7 +149,7 @@ export default function Middle() {
 
           <button
             onClick={handleBackToSelection}
-            className="bg-blue-600 text-white py-2 px-6 rounded-lg text-xl hover:bg-blue-700 transition duration-300 transform hover:scale-105 mt-6"
+            className="bg-blue-600 text-black py-2 px-6 rounded-lg text-xl hover:bg-blue-700 transition duration-300 transform hover:scale-105 mt-6"
           >
             العودة لاختيار السنة
           </button>
@@ -159,7 +159,7 @@ export default function Middle() {
         <section className="text-center mb-8 rtl animate-slideIn">
           <p className="text-2xl font-semibold">اختر سنة من السنوات</p>
           {/* Additional Text */}
-          <p className="text-lg mt-2">
+          <p className="text-lg mt-2 p-3">
             يمكنك اختيار السنة الدراسية للاطلاع على التفاصيل والمواد المطلوبة
             لكل سنة.
           </p>

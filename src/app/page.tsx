@@ -85,7 +85,7 @@ export default function Home() {
                 {selectedImage}
               </h3>
               <button
-                className="absolute top-4 left-4 text-white bg-red-500 p-2 rounded-full hover:bg-red-600"
+                className="absolute top-4 left-4 text-black bg-red-500 p-2 rounded-full hover:bg-red-600"
                 onClick={handleCloseFullScreen}
               >
                 إغلاق
@@ -148,7 +148,7 @@ export default function Home() {
               href="https://maps.app.goo.gl/UamRbzuU8hZkb2qm9"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-600 text-white py-3 px-8 rounded-full text-lg shadow-lg hover:bg-blue-700 transition-transform hover:scale-105"
+              className="bg-blue-600 text-black py-3 px-8 rounded-full text-lg shadow-lg hover:bg-blue-700 transition-transform hover:scale-105"
             >
               احصل على الاتجاهات
             </a>
