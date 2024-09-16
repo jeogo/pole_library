@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "./assets/poleLibrary.png"; // Adjust the import path if necessary
 import Map from "./assets/mapPic.png";
-import { FiMapPin, FiImage } from "react-icons/fi";
+import { FiMapPin, FiImage, FiFacebook, FiInstagram } from "react-icons/fi";
 import { BiPhone } from "react-icons/bi";
 import { MdMail } from "react-icons/md";
 
@@ -36,25 +36,64 @@ export default function Home() {
           قائمة مستلزمات التلاميذ <br />
           لجميع الأطوار الابتدائية و المتوسطة
         </h1>
+        <p className="mt-4 text-center text-lg sm:text-xl md:text-2xl text-gray-800 max-w-3xl">
+          اختر طور التعليم واكتشف قائمة الأدوات التي يحتاجها تلاميذ كل مستوى.
+        </p>
       </section>
 
       {/* Buttons Section for Menus */}
       <section className="w-full flex flex-col items-center gap-6 mb-12">
-        {/* Primary School Button */}
-        <Link
-          href="pages/primary"
-          className="relative text-xl sm:text-2xl md:text-3xl px-8 py-4 bg-white text-black w-64 sm:w-72 rounded-full shadow-lg transition-transform duration-200 hover:scale-105 active:scale-95 hover:shadow-xl text-center"
-        >
-          <span className="font-bold">الابتدائي</span>
-        </Link>
+        <h2 className="text-center text-2xl sm:text-3xl font-semibold mb-4">
+          اختر طور التعليم
+        </h2>
+        <div className="flex flex-wrap justify-center gap-6">
+          {/* Primary School Button */}
+          <Link
+            href="pages/primary"
+            className="relative text-xl sm:text-2xl md:text-3xl px-8 py-4 bg-white text-black w-64 sm:w-72 rounded-full shadow-lg transition-transform duration-200 hover:scale-105 active:scale-95 hover:shadow-xl text-center"
+          >
+            <span className="font-bold">الابتدائي</span>
+          </Link>
 
-        {/* Middle School Button */}
-        <Link
-          href="pages/middle"
-          className="relative text-xl sm:text-2xl md:text-3xl px-8 py-4 bg-white text-black w-64 sm:w-72 rounded-full shadow-lg transition-transform duration-200 hover:scale-105 active:scale-95 hover:shadow-xl text-center"
-        >
-          <span className="font-bold">متوسط</span>
-        </Link>
+          {/* Middle School Button */}
+          <Link
+            href="pages/middle"
+            className="relative text-xl sm:text-2xl md:text-3xl px-8 py-4 bg-white text-black w-64 sm:w-72 rounded-full shadow-lg transition-transform duration-200 hover:scale-105 active:scale-95 hover:shadow-xl text-center"
+          >
+            <span className="font-bold">متوسط</span>
+          </Link>
+        </div>
+      </section>
+
+      {/* Social Media Icons Section */}
+      <section className="w-full flex flex-col items-center mb-12">
+        <h3 className="text-center text-xl font-semibold mb-4">
+          تابعونا على وسائل التواصل الاجتماعي
+        </h3>
+        <div className="flex items-center justify-center gap-6 text-gray-700">
+          <a
+            href="https://www.facebook.com/profile.php?id=100095660198183"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-700 transition-colors"
+          >
+            <FiFacebook size={40} />
+          </a>
+          <a
+            href="https://www.instagram.com/thepolelibrary"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-pink-500 transition-colors"
+          >
+            <FiInstagram size={40} />
+          </a>
+          <a
+            href="mailto:polelibrary@gmail.com"
+            className="hover:text-green-500 transition-colors"
+          >
+            <MdMail size={40} />
+          </a>
+        </div>
       </section>
 
       {/* Gallery Section */}
@@ -143,7 +182,7 @@ export default function Home() {
             </li>
           </ul>
 
-          <div className="text-right">
+          <div className="text-right mt-6">
             <a
               href="https://maps.app.goo.gl/UamRbzuU8hZkb2qm9"
               target="_blank"

@@ -159,8 +159,8 @@ export default function Primary() {
         <section className="text-center mb-8 rtl animate-slideIn ">
           <p className="text-2xl font-semibold">اختر سنة من السنوات</p>
           <p className="text-lg mt-2 p-3">
-            يمكنك اختيار السنة الدراسية للاطلاع على التفاصيل والمواد المطلوبة لكل
-            سنة.
+            يمكنك اختيار السنة الدراسية للاطلاع على التفاصيل والمواد المطلوبة
+            لكل سنة.
           </p>
 
           {/* Buttons */}
